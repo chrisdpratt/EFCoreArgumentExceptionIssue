@@ -23,7 +23,7 @@ namespace EFCoreArgumentExceptionIssue.Controllers
         public async Task<IActionResult> Index(CancellationToken cancellationToken = default)
         {
             var foos = await _context.Foos
-                //.AsNoTracking()
+                .AsNoTracking()
                 .ToListAsync(cancellationToken)
                 .ConfigureAwait(false);
 
