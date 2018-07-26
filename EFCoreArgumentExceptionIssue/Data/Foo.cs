@@ -7,5 +7,6 @@ namespace EFCoreArgumentExceptionIssue.Data
 {
     public class Foo : Entity<long>
     {
+        public string Name { get; set; }
     }
 }

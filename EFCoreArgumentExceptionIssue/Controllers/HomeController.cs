@@ -3,8 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -25,8 +23,7 @@ namespace EFCoreArgumentExceptionIssue.Controllers
         public async Task<IActionResult> Index(CancellationToken cancellationToken = default)
         {
             var foos = await _context.Foos
-                .OrderByDescending(x => x.Created)
-                .AsNoTracking()
+                //.AsNoTracking()
                 .ToListAsync(cancellationToken)
                 .ConfigureAwait(false);
 

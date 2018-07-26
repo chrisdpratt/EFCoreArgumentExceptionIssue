@@ -14,15 +14,6 @@ namespace EFCoreArgumentExceptionIssue.Data
     public abstract class Entity<T> : Entity, IEntity<T>
         where T : IEquatable<T>
     {
-        protected Entity()
-        {
-        }
-
-        internal Entity(IClock clock)
-            : base(clock)
-        {
-        }
-
         /// <summary>
         /// Primary key of entity
         /// </summary>

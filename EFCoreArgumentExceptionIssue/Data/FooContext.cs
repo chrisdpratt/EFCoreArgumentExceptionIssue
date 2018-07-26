@@ -21,9 +21,9 @@ namespace EFCoreArgumentExceptionIssue.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Foo>().HasData(
-                new Foo { Id = 1 },
-                new Foo { Id = 2 },
-                new Foo { Id = 3 }
+                new Foo { Id = 1, Name = "Foo 1" },
+                new Foo { Id = 2, Name = "Foo 2" },
+                new Foo { Id = 3, Name = "Foo 3" }
             );
         }
     }
